@@ -1,0 +1,54 @@
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom Shop Items/Source.lua"))()
+
+
+local TacoBell = LoadCustomInstance("rbxassetid://11844024076")
+local TacoBell = game:GetObjects("rbxassetid://11844024076")[1]
+    TacoBell.Parent = game.Players.LocalPlayer.Backpack
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Made By OfficerMesh and TheNamesJames")
+    local TacoBellActivated = false
+    local duration = 101
+
+    TacoBell.Activated:Connect(function()
+        if not TacoBellActivated then
+            BombActivated = true
+            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "fuck no.")
+            wait(2)
+            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "HELP.")
+             wait(2)
+            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "I dont feel so good...")
+            wait(2)
+            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "AAAA MY STOMACH")
+            wait(0.1)
+            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "it was at this moment that he knew, he fucked up")
+           wait(1)
+            local Fard = Instance.new("Sound")
+            Fard.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+            Fard.SoundId = "rbxassetid://8720014366"
+            Fard:Play()
+             local poop = game:GetObjects("rbxassetid://11575104351")[1]
+        poop.Parent = workspace
+        poop.PoopBottom.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0.5)
+        for i,v in pairs(poop:GetChildren()) do
+            v.CanCollide = true
+        end 
+            task.wait(3)
+        game.Players.LocalPlayer.Character.Humanoid.Health = -99
+        game:GetService("ReplicatedStorage").GameStats["Player_" .. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dont u dare eat Taco Bell ever again"
+        debug.setupvalue(
+            getconnections(game:GetService("ReplicatedStorage").Bricks.DeathHint.OnClientEvent)[1].Function,
+            1,
+            {
+                "You Exploded",
+                "Dont Ever Eat Taco bell",
+                "Im Done, Cut The Screen",
+                "I SAID IM DONE",
+                "ok, bye",
+            }
+        )
+
+        wait(3)
+        TacoBell:Destroy()
+        TacoBellActivated = false
+    end
+end)
