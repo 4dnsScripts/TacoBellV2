@@ -5,7 +5,7 @@ local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/Re
 local TacoBell = LoadCustomInstance("rbxassetid://11844024076")
 local TacoBell = game:GetObjects("rbxassetid://11844024076")[1]
     TacoBell.Parent = game.Players.LocalPlayer.Backpack
-    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Made By OfficerMesh and TheNamesJames")
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Made By TheNamesJames And 4dns")
     local TacoBellActivated = false
     local duration = 101
 
